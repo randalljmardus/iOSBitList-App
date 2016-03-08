@@ -36,9 +36,16 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vW-8L-Pob">
                                                     <rect key="frame" x="292" y="8" width="30" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonTapped:" destination="xwu-82-msK" eventType="touchUpInside" id="pPL-dT-ACW"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addToDoTextField" destination="Q8Q-6y-CEe" id="C21-50-ICd"/>
+                                            <outlet property="favoriteButton" destination="7vW-8L-Pob" id="S4g-HJ-2up"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="B4t-UB-g59" customClass="ToDoTableViewCell" customModule="BitList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="136" width="330" height="44"/>
@@ -50,10 +57,16 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-7w-GUF">
                                                     <rect key="frame" x="8" y="7" width="30" height="30"/>
                                                     <color key="backgroundColor" red="1" green="0.032803843610000001" blue="0.080520849419999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="completeButtonTapped:" destination="B4t-UB-g59" eventType="touchUpInside" id="HoX-Iy-W3D"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOV-bl-HWo">
                                                     <rect key="frame" x="292" y="5" width="30" height="30"/>
                                                     <color key="backgroundColor" red="0.064887647790000003" green="0.38512603449999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonTapped:" destination="B4t-UB-g59" eventType="touchUpInside" id="uiA-a9-FZJ"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfE-HP-hzm">
                                                     <rect key="frame" x="46" y="4" width="238" height="21"/>
@@ -69,6 +82,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="completeButton" destination="gt0-7w-GUF" id="rsF-WH-eHL"/>
+                                            <outlet property="dateLabel" destination="XbQ-ru-v6j" id="7ls-hn-CR7"/>
+                                            <outlet property="favoriteButton" destination="YOV-bl-HWo" id="Ek8-Da-gNw"/>
+                                            <outlet property="titleLabel" destination="zfE-HP-hzm" id="eQx-AG-u0d"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -76,8 +95,15 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="p9J-wU-NUd">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="I0d-SE-5HN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="I0d-SE-5HN">
+                            <connections>
+                                <action selector="editBarButtonItemTapped:" destination="BYZ-38-t0r" id="781-fm-c6d"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="gN9-8F-J9W" id="SRH-29-RiG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,12 @@
 import UIKit
 
 class ToDoTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var completeButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +26,13 @@ class ToDoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func completeButtonTapped(sender: UIButton) {
+    }
+    
+    @IBAction func favoriteButtonTapped(sender: UIButton) {
+    }
+    
+    
 
 }
