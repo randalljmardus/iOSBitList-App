@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		153F32D71C8F223000505242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F32D61C8F223000505242 /* AppDelegate.swift */; };
-		153F32D91C8F223000505242 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F32D81C8F223000505242 /* ViewController.swift */; };
 		153F32DC1C8F223000505242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 153F32DA1C8F223000505242 /* Main.storyboard */; };
 		153F32DF1C8F223000505242 /* BitList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153F32DD1C8F223000505242 /* BitList.xcdatamodeld */; };
 		153F32E11C8F223000505242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 153F32E01C8F223000505242 /* Assets.xcassets */; };
 		153F32E41C8F223000505242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 153F32E21C8F223000505242 /* LaunchScreen.storyboard */; };
 		153F32EF1C8F223000505242 /* BitListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F32EE1C8F223000505242 /* BitListTests.swift */; };
 		153F32FA1C8F223000505242 /* BitListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F32F91C8F223000505242 /* BitListUITests.swift */; };
+		153F33081C8F229500505242 /* ToDosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F33071C8F229500505242 /* ToDosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		153F32D31C8F223000505242 /* BitList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		153F32D61C8F223000505242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		153F32D81C8F223000505242 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		153F32DB1C8F223000505242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		153F32DE1C8F223000505242 /* BitList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BitList.xcdatamodel; sourceTree = "<group>"; };
 		153F32E01C8F223000505242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		153F32F51C8F223000505242 /* BitListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		153F32F91C8F223000505242 /* BitListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitListUITests.swift; sourceTree = "<group>"; };
 		153F32FB1C8F223000505242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		153F33071C8F229500505242 /* ToDosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +79,7 @@
 		153F32CA1C8F223000505242 = {
 			isa = PBXGroup;
 			children = (
+				153F33071C8F229500505242 /* ToDosViewController.swift */,
 				153F32D51C8F223000505242 /* BitList */,
 				153F32ED1C8F223000505242 /* BitListTests */,
 				153F32F81C8F223000505242 /* BitListUITests */,
@@ -100,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				153F32D61C8F223000505242 /* AppDelegate.swift */,
-				153F32D81C8F223000505242 /* ViewController.swift */,
 				153F32DA1C8F223000505242 /* Main.storyboard */,
 				153F32E01C8F223000505242 /* Assets.xcassets */,
 				153F32E21C8F223000505242 /* LaunchScreen.storyboard */,
@@ -259,8 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153F33081C8F229500505242 /* ToDosViewController.swift in Sources */,
 				153F32DF1C8F223000505242 /* BitList.xcdatamodeld in Sources */,
-				153F32D91C8F223000505242 /* ViewController.swift in Sources */,
 				153F32D71C8F223000505242 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
