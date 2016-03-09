@@ -12,12 +12,22 @@ class ToDosViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var baseArray: [[ToDoModel]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let todo1 = ToDoModel(title: "Study iOS", favorited: false, dueDate: NSDate(), completed: false, repeated: nil, reminder: nil)
+        
+        let todo2 = ToDoModel(title: "Eat Dinner", favorited: false, dueDate: nil, completed: false, repeated: nil, reminder: nil)
+        
+        let todo3 = ToDoModel(title: "Gym", favorited: false, dueDate: NSDate(), completed: false, repeated: nil, reminder: nil)
+        
+        baseArray = [[todo1, todo2, todo3], []]
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
