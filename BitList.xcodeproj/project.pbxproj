@@ -17,6 +17,7 @@
 		153F33081C8F229500505242 /* ToDosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F33071C8F229500505242 /* ToDosViewController.swift */; };
 		153F330B1C8F267000505242 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F330A1C8F267000505242 /* ToDoTableViewCell.swift */; };
 		153F330D1C8F269900505242 /* AddToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F330C1C8F269900505242 /* AddToDoTableViewCell.swift */; };
+		153F33101C90A39400505242 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F330F1C90A39400505242 /* ToDoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		153F33071C8F229500505242 /* ToDosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDosViewController.swift; path = ../ToDosViewController.swift; sourceTree = "<group>"; };
 		153F330A1C8F267000505242 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		153F330C1C8F269900505242 /* AddToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToDoTableViewCell.swift; sourceTree = "<group>"; };
+		153F330F1C90A39400505242 /* ToDoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				153F33091C8F25BE00505242 /* ToDosViewController */,
 				153F32D61C8F223000505242 /* AppDelegate.swift */,
+				153F330E1C90A36D00505242 /* Model */,
 				153F32DA1C8F223000505242 /* Main.storyboard */,
 				153F32E01C8F223000505242 /* Assets.xcassets */,
 				153F32E21C8F223000505242 /* LaunchScreen.storyboard */,
@@ -140,6 +143,14 @@
 				153F330C1C8F269900505242 /* AddToDoTableViewCell.swift */,
 			);
 			name = ToDosViewController;
+			sourceTree = "<group>";
+		};
+		153F330E1C90A36D00505242 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				153F330F1C90A39400505242 /* ToDoModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 				153F32DF1C8F223000505242 /* BitList.xcdatamodeld in Sources */,
 				153F32D71C8F223000505242 /* AppDelegate.swift in Sources */,
 				153F330B1C8F267000505242 /* ToDoTableViewCell.swift in Sources */,
+				153F33101C90A39400505242 /* ToDoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
