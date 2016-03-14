@@ -47,7 +47,7 @@
                                             <outlet property="favoriteButton" destination="7vW-8L-Pob" id="S4g-HJ-2up"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="B4t-UB-g59" customClass="ToDoTableViewCell" customModule="BitList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" id="B4t-UB-g59" customClass="ToDoTableViewCell" customModule="BitList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="136" width="330" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B4t-UB-g59" id="5X1-de-ArH">

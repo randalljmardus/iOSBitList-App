@@ -48,9 +48,25 @@ class ToDosViewController: UIViewController, UITableViewDataSource, UITableViewD
                 as! AddToDoTableViewCell
             
             cell.backgroundColor = UIColor(red: 208/255, green: 198/255, blue: 177/255, alpha: 0.7)
+    }
+    
+        else if indexPath.section == 1 || indexPath.section == 2 {
+            let currentToDo = baseArray[indexPath.section - 1][indexPath.row]
+        
+            let cell: ToDoTableViewCell = tableView.dequeueReusableCellWithIdentifier("ToDoCell") as! ToDoTableViewCell
+        
+            cell.titleLabel.text = currentToDo.title
             
-            return cell
+            let dateStringFormatter = NSDateFormatter()
+            dateStringFormatter.dateFormat = "yyyy-MM-dd"
+            
+            if let date = currentToDo.dueDate {
+                let dateString = dateStringFormatter.stringFromDate(date)
+                cell.dateLabel.text = dateString
+            }
+            
         }
+        
         
         return UITableViewCell()
     }
