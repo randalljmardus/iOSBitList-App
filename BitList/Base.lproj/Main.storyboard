@@ -21,7 +21,7 @@
                                 <rect key="frame" x="56" y="64" width="330" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xwu-82-msK" customClass="AddToDoTableViewCell" customModule="BitList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddToDoCell" id="xwu-82-msK" customClass="AddToDoTableViewCell" customModule="BitList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="330" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xwu-82-msK" id="Tb9-XF-KUg">

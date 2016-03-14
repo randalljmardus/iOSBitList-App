@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToDosViewController: UIViewController {
+class ToDosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,6 +27,8 @@ class ToDosViewController: UIViewController {
         
         baseArray = [[todo1, todo2, todo3], []]
         
+        tableView.dataSource = self
+        tableView.delegate = self
         
     }
 
@@ -38,6 +40,39 @@ class ToDosViewController: UIViewController {
     @IBAction func editBarButtonItemTapped(sender: UIBarButtonItem) {
     }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
+        if indexPath.section == 0 {
+            let cell: AddToDoTableViewCell = tableView.dequeueReusableCellWithIdentifier("AddToDoCell")
+                as! AddToDoTableViewCell
+            
+            cell.backgroundColor = UIColor(red: 208/255, green: 198/255, blue: 177/255, alpha: 0.7)
+            
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
+        else if section == 1 {
+            return baseArray[0].count
+        }
+        else if section == 2 {
+            return baseArray[1].count
+        }
+        else {
+            return 0
+        }
+    }
     
     
 
