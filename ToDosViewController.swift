@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToDosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ToDosViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -39,7 +39,9 @@ class ToDosViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func editBarButtonItemTapped(sender: UIBarButtonItem) {
     }
-    
+}
+
+extension ToDosViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
@@ -48,13 +50,13 @@ class ToDosViewController: UIViewController, UITableViewDataSource, UITableViewD
                 as! AddToDoTableViewCell
             
             cell.backgroundColor = UIColor(red: 208/255, green: 198/255, blue: 177/255, alpha: 0.7)
-    }
-    
+        }
+            
         else if indexPath.section == 1 || indexPath.section == 2 {
             let currentToDo = baseArray[indexPath.section - 1][indexPath.row]
-        
+            
             let cell: ToDoTableViewCell = tableView.dequeueReusableCellWithIdentifier("ToDoCell") as! ToDoTableViewCell
-        
+            
             cell.titleLabel.text = currentToDo.title
             
             let dateStringFormatter = NSDateFormatter()
@@ -65,9 +67,28 @@ class ToDosViewController: UIViewController, UITableViewDataSource, UITableViewD
                 cell.dateLabel.text = dateString
             }
             
+            if indexPath.section == 1 {
+                cell.completeButton.backgroundColor = UIColor.redColor()
+            }
+            else {
+                cell.completeButton.backgroundColor = UIColor.greenColor()
+            }
+            
+            if currentToDo.favorited {
+                cell.favoriteButton.backgroundColor = UIColor.blueColor()
+            }
+            else {
+                cell.favoriteButton.backgroundColor = UIColor.orangeColor()
+            }
+            
+            cell.backgroundColor = UIColor(red: 235/255, green: 176/255, blue: 53/255, alpha: 0.7)
+            
+            return cell
+            
         }
-        
-        
+        //        else {
+        //           return UITableViewCell()
+        //        }
         return UITableViewCell()
     }
     
@@ -89,7 +110,8 @@ class ToDosViewController: UIViewController, UITableViewDataSource, UITableViewD
             return 0
         }
     }
-    
-    
-
 }
+
+
+
+
