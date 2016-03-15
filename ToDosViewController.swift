@@ -52,6 +52,16 @@ class ToDosViewController: UIViewController, UITableViewDelegate {
 }
 
 extension ToDosViewController: UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.section == 1 {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
