@@ -62,6 +62,14 @@ extension ToDosViewController: UITableViewDataSource {
         }
     }
     
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        
+        let currentToDo = baseArray[0][sourceIndexPath.row]
+        
+        baseArray[0].removeAtIndex(sourceIndexPath.row)
+        baseArray[0].insert(currentToDo, atIndex: destinationIndexPath.row)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
