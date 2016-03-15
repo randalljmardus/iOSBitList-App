@@ -38,6 +38,16 @@ class ToDosViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func editBarButtonItemTapped(sender: UIBarButtonItem) {
+        
+        if sender.title == "Edit" {
+            if tableView.editing {
+                tableView.setEditing(false, animated: true)
+            }
+            else {
+                tableView.setEditing(true, animated: true)
+            }
+        }
+        
     }
 }
 
