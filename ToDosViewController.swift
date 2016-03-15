@@ -70,6 +70,16 @@ extension ToDosViewController: UITableViewDataSource {
         baseArray[0].insert(currentToDo, atIndex: destinationIndexPath.row)
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            tableView.beginUpdates()
+            baseArray[indexPath.section - 1].removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            tableView.endUpdates()
+        }
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
