@@ -53,6 +53,16 @@ class ToDosViewController: UIViewController, UITableViewDelegate {
         }
         
     }
+    
+    //: Mark - Keyboard notifications
+    
+    func keyboardWillShow(notification: NSNotification) {
+        navigationItem.rightBarButtonItem?.title = "Done"
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        navigationItem.rightBarButtonItem?.title = "Edit"
+    }
 }
 
 extension ToDosViewController: UITableViewDataSource {
